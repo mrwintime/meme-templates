@@ -3,84 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Templates</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #3E3F5B;
-            color: #F6F1DE;
-            text-align: center;
-        }
-        h1 {
-            margin-top: 20px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .meme {
-            background-color: #8AB2A6;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .meme img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .download-btn {
-            margin-top: 10px;
-            padding: 8px 12px;
-            background-color: #ACD3A8;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .download-btn:hover {
-            background-color: #8AB2A6;
-        }
-    </style>
+    <title>Meme Template Website</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>Meme Templates</h1>
-    <div class="gallery" id="gallery">
-        <!-- Meme templates will be added here -->
-    </div>
-    <script>
-        const memes = [
-            { src: 'https://i.imgflip.com/1bij.jpg', name: 'One Does Not Simply' },
-            { src: 'https://i.imgflip.com/26am.jpg', name: 'Distracted Boyfriend' },
-            { src: 'https://i.imgflip.com/1otk96.jpg', name: 'Change My Mind' }
-        ];
-        
-        const gallery = document.getElementById("gallery");
-        
-        memes.forEach(meme => {
-            const memeDiv = document.createElement("div");
-            memeDiv.classList.add("meme");
-            
-            const img = document.createElement("img");
-            img.src = meme.src;
-            img.alt = meme.name;
-            
-            const btn = document.createElement("button");
-            btn.classList.add("download-btn");
-            btn.innerText = "Download";
-            btn.onclick = () => {
-                const link = document.createElement('a');
-                link.href = meme.src;
-                link.download = meme.name + '.jpg';
-                link.click();
-            };
-            
-            memeDiv.appendChild(img);
-            memeDiv.appendChild(btn);
-            gallery.appendChild(memeDiv);
-        });
-    </script>
+    <header>
+        <h1>Meme Template & Generator</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="upload.html">Upload</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="meme-templates">
+            <h2>Meme Templates</h2>
+            <div class="gallery">
+                <!-- Meme Templates will be loaded here -->
+            </div>
+        </section>
+
+        <section id="memes">
+            <h2>Memes</h2>
+            <div class="gallery">
+                <!-- Memes will be loaded here -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Meme Template Website</p>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
+
