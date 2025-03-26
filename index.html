@@ -6,37 +6,29 @@
     <title>Meme Template Website</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="dark-mode">
+
+    <!-- Header -->
     <header>
-        <h1>Meme Template & Generator</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="upload.html">Upload</a>
-            <a href="login.html">Login</a>
+            <a href="index.html" class="logo">MemeHub</a>
+            <button id="theme-toggle">Toggle Theme</button>
+            <div class="profile">
+                <img src="assets/images/default-profile.png" alt="Profile" class="profile-icon">
+                <div id="profile-menu" class="hidden">
+                    <a href="login.html">Log in</a>
+                    <a href="signup.html">Sign up</a>
+                </div>
+            </div>
         </nav>
     </header>
-    
-    <main>
-        <section id="meme-templates">
-            <h2>Meme Templates</h2>
-            <div class="gallery">
-                <!-- Meme Templates will be loaded here -->
-            </div>
-        </section>
 
-        <section id="memes">
-            <h2>Memes</h2>
-            <div class="gallery">
-                <!-- Memes will be loaded here -->
-            </div>
-        </section>
+    <!-- Main Content -->
+    <main>
+        <h1>Welcome to MemeHub</h1>
+        <p>Download and upload the best meme templates.</p>
     </main>
-    
-    <footer>
-        <p>&copy; 2025 Meme Template Website</p>
-    </footer>
-    
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-
