@@ -1,141 +1,108 @@
 /* General Styles */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #3E3F5B;
     color: #F6F1DE;
-    font-family: Arial, sans-serif;
 }
 
-/* Sidebar (Menu) */
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2E2F47;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F6F1DE;
+}
+
+.nav-links a {
+    color: #F6F1DE;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Sidebar Menu */
 .sidebar {
     position: fixed;
-    left: -260px;
+    left: -250px;
     top: 0;
     width: 250px;
     height: 100%;
-    background: #2C2D3F;
-    padding: 20px;
+    background-color: #2E2F47;
     transition: left 0.3s ease-in-out;
+    padding-top: 20px;
 }
 
-/* Sidebar Active */
-.sidebar.active {
-    left: 0;
-}
-
-/* Sidebar Menu Items */
 .sidebar ul {
     list-style: none;
     padding: 0;
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+    padding: 15px;
+    text-align: center;
 }
 
-/* Menu Items */
-.sidebar ul li button,
-.sidebar ul li a {
-    background: none;
-    border: none;
+.sidebar ul li a, .sidebar ul li button {
     color: #F6F1DE;
-    font-size: 18px;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    background: none;
     cursor: pointer;
     display: block;
-    text-align: left;
-    padding: 10px;
     width: 100%;
 }
 
-.sidebar ul li button:hover,
-.sidebar ul li a:hover {
-    background: #3E3F5B;
-    border-radius: 5px;
-}
-
-/* Remove the "X" Button */
-.close-btn {
-    display: none;
-}
-
-/* Ensure Menu Icon (☰) Stays Visible */
 .menu-icon {
-    font-size: 24px;
+    font-size: 1.5rem;
     cursor: pointer;
     color: #F6F1DE;
-    position: fixed;
-    top: 10px;
-    left: 15px;
-    z-index: 1000;
-}
-
-/* Overlay to Detect Click Outside */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 999;
 }
 
 /* Profile Section */
 .profile-section {
-    position: absolute;
-    top: 10px;
-    right: 15px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    position: relative;
 }
 
-/* Profile Icon */
 .profile-icon {
     width: 40px;
     height: 40px;
-    background: url('default-profile.png') center/cover;
+    background-color: #8AB2A6;
     border-radius: 50%;
     cursor: pointer;
 }
 
-/* Profile Menu */
 .profile-menu {
     position: absolute;
     top: 50px;
-    right: 0;
-    background: #2C2D3F;
+    right: 10px;
+    background: #2E2F47;
     padding: 10px;
+    border-radius: 5px;
     display: none;
 }
 
-/* Show Profile Menu */
 .profile-menu a {
     color: #F6F1DE;
     text-decoration: none;
-    display: block;
-    padding: 5px;
 }
 
-.profile-menu a:hover {
-    background: #3E3F5B;
-}
+.hidden { display: none; }
 
-/* Auth Buttons */
-#auth-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-#auth-buttons button {
-    background: #8AB2A6;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    color: black;
-}
-
-#auth-buttons button:hover {
-    background: #ACD3A8;
+/* Main Content */
+.main-content {
+    text-align: center;
+    padding: 50px 20px;
 }
