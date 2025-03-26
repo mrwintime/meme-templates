@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const profileIcon = document.getElementById("profile-icon");
     const profileMenu = document.getElementById("profile-menu");
     const authButtons = document.getElementById("auth-buttons");
-    const profileSection = document.getElementById("profile-section");
+    const profileContainer = document.getElementById("profile-container");
 
     // Simulated login check (replace with actual login check logic)
-    let isLoggedIn = false; // Change to true to test logged-in state
+    let isLoggedIn = false; // Change this to true to test logged-in state
 
     if (isLoggedIn) {
         authButtons.classList.add("hidden");
-        profileSection.classList.remove("hidden");
+        profileContainer.classList.remove("hidden");
     }
 
     // Toggle sidebar
@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (profileIcon) {
         profileIcon.addEventListener("click", function (event) {
             event.stopPropagation();
-            profileMenu.style.display = profileMenu.style.display === "block" ? "none" : "block";
+            profileMenu.classList.toggle("hidden");
         });
 
         // Close profile menu when clicking outside
         document.addEventListener("click", function (event) {
             if (!profileMenu.contains(event.target) && !profileIcon.contains(event.target)) {
-                profileMenu.style.display = "none";
+                profileMenu.classList.add("hidden");
             }
         });
     }

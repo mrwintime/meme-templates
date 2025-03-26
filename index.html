@@ -10,12 +10,22 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div id="menu-icon" class="menu-icon">☰</div>
-        <div class="logo">Talkindie</div>
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+        <div class="nav-left">
+            <div id="menu-icon" class="menu-icon">☰</div>
+            <div class="logo">MemeGen</div>
+        </div>
+        <div class="nav-right">
+            <div id="profile-container" class="hidden">
+                <div id="add-icon" class="add-icon">+</div>
+                <div id="profile-icon" class="profile-icon"></div>
+                <div id="profile-menu" class="profile-menu hidden">
+                    <a href="edit-profile.html">Edit Profile</a>
+                </div>
+            </div>
+            <div id="auth-buttons">
+                <button onclick="window.location.href='login.html'">Log in</button>
+                <button onclick="window.location.href='signup.html'">Sign up</button>
+            </div>
         </div>
     </nav>
 
@@ -28,23 +38,9 @@
         </ul>
     </div>
 
-    <!-- Profile Section -->
-    <div class="profile-section">
-        <div id="profile-container">
-            <div id="profile-icon" class="profile-icon"></div>
-            <div id="profile-menu" class="profile-menu hidden">
-                <a href="edit-profile.html">Edit Profile</a>
-            </div>
-        </div>
-        <div id="auth-buttons">
-            <button onclick="window.location.href='login.html'">Log in</button>
-            <button onclick="window.location.href='signup.html'">Sign up</button>
-        </div>
-    </div>
-
     <!-- Main Content -->
     <div class="main-content">
-        <h1>Welcome to Talkindie</h1>
+        <h1>Welcome to MemeGen</h1>
         <p>Your go-to place for meme templates and captions!</p>
     </div>
 

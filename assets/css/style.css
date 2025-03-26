@@ -25,6 +25,7 @@ body {
     z-index: 1000;
 }
 
+/* Left side of navbar */
 .nav-left {
     display: flex;
     align-items: center;
@@ -45,12 +46,13 @@ body {
     color: white;
 }
 
-/* Navbar Right */
+/* Right side of navbar */
 .nav-right {
     display: flex;
     align-items: center;
 }
 
+/* Auth Buttons */
 #auth-buttons button {
     margin-left: 10px;
     background: #555;
@@ -66,16 +68,19 @@ body {
 }
 
 /* Profile Section */
-#profile-section {
+#profile-container {
+    display: flex;
+    align-items: center;
     position: relative;
     cursor: pointer;
-    display: none;
 }
 
+/* Profile Icon */
 .profile-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    background: gray;
     cursor: pointer;
     margin-left: 15px;
 }
@@ -114,24 +119,26 @@ body {
     padding: 20px;
 }
 
+/* Open Sidebar */
 .sidebar.open {
     left: 0;
 }
 
-.sidebar-content a {
+/* Sidebar links */
+.sidebar a {
     display: block;
     color: white;
     text-decoration: none;
     padding: 10px;
 }
 
-.sidebar-content a:hover {
+.sidebar a:hover {
     background: #444;
 }
 
 /* Main Content */
-.content {
-    padding: 80px 20px 20px;
+.main-content {
+    padding: 100px 20px 20px;
 }
 
 /* Hide Elements */
