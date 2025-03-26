@@ -8,7 +8,7 @@ body {
 /* Sidebar (Menu) */
 .sidebar {
     position: fixed;
-    left: -270px;
+    left: -260px;
     top: 0;
     width: 250px;
     height: 100%;
