@@ -101,7 +101,7 @@ body {
     text-decoration: none;
     display: block;
     padding: 5px 0;
-    size: 10px
+    
 }
 
 .profile-menu a:hover {
@@ -118,6 +118,7 @@ body {
     background: #222;
     transition: left 0.3s ease-in-out;
     padding: 20px;
+    padding-top: 50px;
 }
 
 /* Open Sidebar */
