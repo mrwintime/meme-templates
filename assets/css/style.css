@@ -110,7 +110,7 @@ body {
 /* Add this rule to style the "+" icon */
 .add-icon {
     font-size: 40px;  /* Increase size */
-    font-weight: bold;
+    font-weight: normal;
     cursor: pointer;
     margin-left: 15px;  /* Adjust spacing */
     color: white;
