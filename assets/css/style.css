@@ -109,7 +109,7 @@ body {
 }
 /* Add this rule to style the "upload" icon */
 .add-icon {
-    font-size: 15px;  /* Increase size */
+    font-size: 35px;  /* Increase size */
     font-weight: normal;
     cursor: pointer;
     margin-left: 15px;  /* Adjust spacing */
@@ -119,7 +119,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 60px;  /* Set a fixed width */
-    height: 40px; /* Set a fixed height */
+    height: 60px; /* Set a fixed height */
     border-radius: 50%; /* Makes it circular */
     background-color: #444; /* Background color */
 }
