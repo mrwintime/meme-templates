@@ -1,114 +1,141 @@
-/* Default Styles */
+/* General Styles */
 body {
-    background-color: #5A6C57;
+    background-color: #3E3F5B;
     color: #F6F1DE;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-/* Sidebar */
+/* Sidebar (Menu) */
 .sidebar {
     position: fixed;
-    left: 0;
+    left: -260px;
     top: 0;
     width: 250px;
     height: 100%;
     background: #2C2D3F;
     padding: 20px;
-    display: none;
-    flex-direction: column;
+    transition: left 0.3s ease-in-out;
 }
 
+/* Sidebar Active */
+.sidebar.active {
+    left: 0;
+}
+
+/* Sidebar Menu Items */
 .sidebar ul {
     list-style: none;
     padding: 0;
 }
 
 .sidebar ul li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
-.close-btn {
-    font-size: 24px;
+/* Menu Items */
+.sidebar ul li button,
+.sidebar ul li a {
     background: none;
     border: none;
     color: #F6F1DE;
+    font-size: 18px;
     cursor: pointer;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
 }
 
-/* Menu Icon */
+.sidebar ul li button:hover,
+.sidebar ul li a:hover {
+    background: #3E3F5B;
+    border-radius: 5px;
+}
+
+/* Remove the "X" Button */
+.close-btn {
+    display: none;
+}
+
+/* Ensure Menu Icon (☰) Stays Visible */
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
     color: #F6F1DE;
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    z-index: 1000;
 }
 
-/* Navbar */
-header {
-    background-color: #525B44;
-    padding: 10px 20px;
+/* Overlay to Detect Click Outside */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+/* Profile Section */
+.profile-section {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-/* Left Icons */
-.left-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Upload Button */
-.upload-btn {
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #8AB2A6;
-    color: #2C2D3F;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.upload-btn:hover {
-    background-color: #ACD3A8;
-}
-
-/* Non-Logged-In Users */
-.non-logged a {
-    color: #F6F1DE;
-    text-decoration: none;
-    padding: 5px 10px;
-    background: #8AB2A6;
-    border-radius: 5px;
-}
-
-/* Profile */
-.profile {
-    position: relative;
-}
-
+/* Profile Icon */
 .profile-icon {
     width: 40px;
     height: 40px;
+    background: url('default-profile.png') center/cover;
     border-radius: 50%;
     cursor: pointer;
 }
 
-/* Profile Dropdown */
-#profile-menu {
+/* Profile Menu */
+.profile-menu {
     position: absolute;
     top: 50px;
-    left: 0;
-    background-color: #2C2D3F;
-    border-radius: 5px;
+    right: 0;
+    background: #2C2D3F;
     padding: 10px;
     display: none;
 }
 
-/* Hidden Class */
-.hidden {
-    display: none;
+/* Show Profile Menu */
+.profile-menu a {
+    color: #F6F1DE;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+
+.profile-menu a:hover {
+    background: #3E3F5B;
+}
+
+/* Auth Buttons */
+#auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#auth-buttons button {
+    background: #8AB2A6;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+#auth-buttons button:hover {
+    background: #ACD3A8;
 }

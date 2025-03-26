@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Meme Template Website</title>
+    <title>Meme Template & Caption Generator</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Sidebar (Hidden by Default) -->
-    <div id="sidebar" class="sidebar hidden">
-        <button class="close-btn" id="close-sidebar">&times;</button>
+    <!-- Menu Icon (☰) -->
+    <div id="menu-icon" class="menu-icon">☰</div>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
         <ul>
             <li><button id="theme-toggle">Themes</button></li>
             <li><a href="#">Settings</a></li>
@@ -18,33 +20,19 @@
         </ul>
     </div>
 
-    <!-- Navbar -->
-    <header>
-        <!-- Menu Icon -->
-        <div class="menu-icon" id="menu-icon">&#9776;</div>
-        
-        <!-- Website Logo & Name -->
-        <a href="#" class="logo">MyWebsite</a>
-
-        <!-- Left Side (Profile & Upload Button) -->
-        <div class="left-icons">
-            <button class="upload-btn">+</button>
-            
-            <!-- Non-Logged-In Users -->
-            <div class="non-logged hidden">
-                <a href="login.html" class="btn">Log in</a>
-                <a href="signup.html" class="btn">Sign up</a>
-            </div>
-
-            <!-- Logged-In Users -->
-            <div class="profile hidden">
-                <img src="assets/images/default-profile.png" alt="Profile" class="profile-icon" id="profile-icon">
-                <div id="profile-menu" class="hidden">
-                    <a href="edit-profile.html">Edit Profile</a>
-                </div>
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <div id="profile-container">
+            <div id="profile-icon" class="profile-icon"></div>
+            <div id="profile-menu" class="profile-menu hidden">
+                <a href="edit-profile.html">Edit Profile</a>
             </div>
         </div>
-    </header>
+        <div id="auth-buttons">
+            <button onclick="window.location.href='login.html'">Log in</button>
+            <button onclick="window.location.href='signup.html'">Sign up</button>
+        </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>

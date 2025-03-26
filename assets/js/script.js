@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const isLoggedIn = false; // Change to true when user is logged in
+    const isLoggedIn = false; // Change to true for logged-in state
 
-    // Handle Profile Menu
+    // Profile Menu
     const profileIcon = document.getElementById("profile-icon");
     const profileMenu = document.getElementById("profile-menu");
+
     if (profileIcon) {
         profileIcon.addEventListener("click", function () {
             profileMenu.classList.toggle("hidden");
@@ -16,35 +17,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Show correct user interface
-    const loggedProfile = document.querySelector(".profile");
-    const nonLoggedSection = document.querySelector(".non-logged");
-
-    if (isLoggedIn) {
-        loggedProfile.classList.remove("hidden");
-        nonLoggedSection.classList.add("hidden");
-    } else {
-        loggedProfile.classList.add("hidden");
-        nonLoggedSection.classList.remove("hidden");
-    }
-
-    // Handle Sidebar Toggle
+    // Toggle Sidebar Menu
     const menuIcon = document.getElementById("menu-icon");
     const sidebar = document.getElementById("sidebar");
-    const closeSidebar = document.getElementById("close-sidebar");
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    document.body.appendChild(overlay);
 
     menuIcon.addEventListener("click", function () {
-        sidebar.style.display = "flex";
+        sidebar.classList.toggle("active");
+        overlay.style.display = sidebar.classList.contains("active") ? "block" : "none";
     });
 
-    closeSidebar.addEventListener("click", function () {
-        sidebar.style.display = "none";
+    // Close sidebar when clicking outside
+    overlay.addEventListener("click", function () {
+        sidebar.classList.remove("active");
+        overlay.style.display = "none";
     });
 
     // Theme Toggle
     const themeToggle = document.getElementById("theme-toggle");
     const body = document.body;
-    
+
     if (isLoggedIn) {
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme) {
