@@ -4,26 +4,6 @@ body {
     color: #F6F1DE;
     font-family: Arial, sans-serif;
 }
-/* Navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #2E2F47;
-    padding: 10px 20px;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #F6F1DE;
-}
-
-.nav-links a {
-    color: #F6F1DE;
-    text-decoration: none;
-    margin: 0 10px;
-}
 
 /* Sidebar (Menu) */
 .sidebar {

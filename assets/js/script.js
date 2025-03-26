@@ -1,32 +1,57 @@
-// Sidebar Toggle
-const menuIcon = document.getElementById("menu-icon");
-const sidebar = document.getElementById("sidebar");
-const profileIcon = document.getElementById("profile-icon");
-const profileMenu = document.getElementById("profile-menu");
-const authButtons = document.getElementById("auth-buttons");
-const addIcon = document.getElementById("add-icon");
+document.addEventListener("DOMContentLoaded", function () {
+    const isLoggedIn = false; // Change to true for logged-in state
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.addEventListener("click", (event) => {
-        if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
-            sidebar.style.left = "-250px";
-        }
-        if (!profileContainer.contains(event.target)) {
-            profileMenu.classList.add("hidden");
-        }
+    // Profile Menu
+    const profileIcon = document.getElementById("profile-icon");
+    const profileMenu = document.getElementById("profile-menu");
+
+    if (profileIcon) {
+        profileIcon.addEventListener("click", function () {
+            profileMenu.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!profileIcon.contains(event.target) && !profileMenu.contains(event.target)) {
+                profileMenu.classList.add("hidden");
+            }
+        });
+    }
+
+    // Toggle Sidebar Menu
+    const menuIcon = document.getElementById("menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    document.body.appendChild(overlay);
+
+    menuIcon.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+        overlay.style.display = sidebar.classList.contains("active") ? "block" : "none";
     });
-});
 
-menuIcon.addEventListener("click", () => {
-    sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
-});
+    // Close sidebar when clicking outside
+    overlay.addEventListener("click", function () {
+        sidebar.classList.remove("active");
+        overlay.style.display = "none";
+    });
 
-profileIcon.addEventListener("click", () => {
-    profileMenu.classList.toggle("hidden");
-});
+    // Theme Toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
 
-// Theme Toggle (Placeholder Functionality)
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.addEventListener("click", () => {
-    window.location.href = "login.html";
+    if (isLoggedIn) {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            body.classList.toggle("light-mode", savedTheme === "light");
+        }
+    }
+
+    themeToggle.addEventListener("click", function () {
+        if (!isLoggedIn) {
+            window.location.href = "login.html";
+            return;
+        }
+        body.classList.toggle("light-mode");
+        localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
+    });
 });
