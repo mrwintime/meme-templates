@@ -1,6 +1,6 @@
 /* Default Styles */
 body {
-    background-color: #3E3F5B;
+    background-color: #5A6C57;
     color: #F6F1DE;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -46,7 +46,7 @@ body {
 
 /* Navbar */
 header {
-    background-color: #780C28;
+    background-color: #525B44;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
