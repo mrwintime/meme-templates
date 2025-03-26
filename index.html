@@ -3,31 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Template Website</title>
+    <title>My Meme Template Website</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="dark-mode">
+<body>
 
-    <!-- Header -->
+    <!-- Sidebar (Hidden by Default) -->
+    <div id="sidebar" class="sidebar hidden">
+        <button class="close-btn" id="close-sidebar">&times;</button>
+        <ul>
+            <li><button id="theme-toggle">Themes</button></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Categories</a></li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
     <header>
-        <nav>
-            <a href="index.html" class="logo">MemeHub</a>
-            <button id="theme-toggle">Toggle Theme</button>
-            <div class="profile">
-                <img src="assets/images/default-profile.png" alt="Profile" class="profile-icon">
+        <!-- Menu Icon -->
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        
+        <!-- Website Logo & Name -->
+        <a href="#" class="logo">MyWebsite</a>
+
+        <!-- Left Side (Profile & Upload Button) -->
+        <div class="left-icons">
+            <button class="upload-btn">+</button>
+            
+            <!-- Non-Logged-In Users -->
+            <div class="non-logged hidden">
+                <a href="login.html" class="btn">Log in</a>
+                <a href="signup.html" class="btn">Sign up</a>
+            </div>
+
+            <!-- Logged-In Users -->
+            <div class="profile hidden">
+                <img src="assets/images/default-profile.png" alt="Profile" class="profile-icon" id="profile-icon">
                 <div id="profile-menu" class="hidden">
-                    <a href="login.html">Log in</a>
-                    <a href="signup.html">Sign up</a>
+                    <a href="edit-profile.html">Edit Profile</a>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
-
-    <!-- Main Content -->
-    <main>
-        <h1>Welcome to MemeHub</h1>
-        <p>Download and upload the best meme templates.</p>
-    </main>
 
     <script src="assets/js/script.js"></script>
 </body>
