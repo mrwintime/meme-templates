@@ -107,6 +107,26 @@ body {
 .profile-menu a:hover {
     background: #555;
 }
+/* Add this rule to style the "+" icon */
+.add-icon {
+    font-size: 28px;  /* Increase size */
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;  /* Adjust spacing */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    border-radius: 50%; /* Makes it circular */
+    background-color: #444; /* Background color */
+}
+
+/* Hover effect */
+.add-icon:hover {
+    background-color: #666;
+}
 
 /* Sidebar */
 .sidebar {
