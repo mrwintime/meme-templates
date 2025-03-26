@@ -101,6 +101,7 @@ body {
     text-decoration: none;
     display: block;
     padding: 5px 0;
+    size: 10px
 }
 
 .profile-menu a:hover {
