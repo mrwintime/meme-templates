@@ -1,9 +1,15 @@
 /* General Styles */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #1e1e1e;
     color: white;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -13,6 +19,10 @@ body {
     align-items: center;
     background: #333;
     padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-left {
@@ -20,6 +30,7 @@ body {
     align-items: center;
 }
 
+/* Menu Icon */
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
@@ -27,9 +38,11 @@ body {
     color: white;
 }
 
+/* Logo */
 .logo {
     font-size: 22px;
     font-weight: bold;
+    color: white;
 }
 
 /* Navbar Right */
@@ -43,13 +56,20 @@ body {
     background: #555;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 7px 12px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
+#auth-buttons button:hover {
+    background: #777;
+}
+
+/* Profile Section */
 #profile-section {
     position: relative;
     cursor: pointer;
+    display: none;
 }
 
 .profile-icon {
@@ -60,6 +80,7 @@ body {
     margin-left: 15px;
 }
 
+/* Profile Menu */
 .profile-menu {
     position: absolute;
     right: 0;
@@ -75,6 +96,10 @@ body {
     text-decoration: none;
     display: block;
     padding: 5px 0;
+}
+
+.profile-menu a:hover {
+    background: #555;
 }
 
 /* Sidebar */
@@ -100,12 +125,16 @@ body {
     padding: 10px;
 }
 
-/* Main Content */
-.content {
-    padding: 20px;
+.sidebar-content a:hover {
+    background: #444;
 }
 
-/* Hidden Class */
+/* Main Content */
+.content {
+    padding: 80px 20px 20px;
+}
+
+/* Hide Elements */
 .hidden {
     display: none;
 }
