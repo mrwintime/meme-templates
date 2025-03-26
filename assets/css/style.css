@@ -109,7 +109,7 @@ body {
 }
 /* Add this rule to style the "upload" icon */
 .add-icon {
-    font-size: 45px;  /* Increase size */
+    font-size: 40px;  /* Increase size */
     font-weight: normal;
     cursor: pointer;
     margin-left: 15px;  /* Adjust spacing */
