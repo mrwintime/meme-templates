@@ -107,9 +107,9 @@ body {
 .profile-menu a:hover {
     background: #555;
 }
-/* Add this rule to style the "+" icon */
+/* Add this rule to style the "upload" icon */
 .add-icon {
-    font-size: 35px;  /* Increase size */
+    font-size: 20px;  /* Increase size */
     font-weight: normal;
     cursor: pointer;
     margin-left: 15px;  /* Adjust spacing */
