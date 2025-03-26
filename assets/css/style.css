@@ -109,12 +109,13 @@ body {
 }
 /* Add this rule to style the "+" icon */
 .add-icon {
-    font-size: 20px;  /* Increase size */
+    font-size: 35px;  /* Increase size */
     font-weight: normal;
     cursor: pointer;
     margin-left: 15px;  /* Adjust spacing */
     color: white;
     display: flex;
+    right:100;
     align-items: center;
     justify-content: center;
     width: 40px;  /* Set a fixed width */
