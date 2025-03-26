@@ -1,30 +1,18 @@
-/* Reset Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
+/* General Styles */
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background-color: #1e1e1e;
-    color: #fff;
-    overflow-x: hidden;
+    color: white;
 }
 
 /* Navbar */
 .navbar {
-    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: #333;
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    align-items: center;
+    background: #333;
+    padding: 10px 20px;
 }
 
 .nav-left {
@@ -35,73 +23,48 @@ body {
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
-    color: white;
     margin-right: 15px;
+    color: white;
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    color: white;
 }
 
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    width: 250px;
-    height: 100vh;
-    background-color: #222;
-    padding-top: 60px;
-    transition: 0.3s;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 10px;
-}
-
-.sidebar ul li {
-    padding: 10px;
-    text-align: center;
-}
-
-.sidebar ul li a, .sidebar ul li button {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 10px;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
-/* Profile Section */
-.profile-section {
+/* Navbar Right */
+.nav-right {
     display: flex;
     align-items: center;
 }
 
-.add-icon {
-    font-size: 24px;
-    margin-right: 10px;
+#auth-buttons button {
+    margin-left: 10px;
+    background: #555;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#profile-section {
+    position: relative;
     cursor: pointer;
 }
 
 .profile-icon {
     width: 40px;
     height: 40px;
-    background-color: gray;
     border-radius: 50%;
     cursor: pointer;
+    margin-left: 15px;
 }
 
 .profile-menu {
     position: absolute;
+    right: 0;
     top: 50px;
-    right: 20px;
-    background: #333;
+    background: #444;
     padding: 10px;
     display: none;
     border-radius: 5px;
@@ -110,29 +73,39 @@ body {
 .profile-menu a {
     color: white;
     text-decoration: none;
+    display: block;
+    padding: 5px 0;
 }
 
-.hidden {
-    display: none;
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #222;
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
 }
 
-/* Auth Buttons */
-.auth-buttons {
-    display: flex;
-    align-items: center;
+.sidebar.open {
+    left: 0;
 }
 
-.auth-buttons button {
-    background: none;
-    border: none;
+.sidebar-content a {
+    display: block;
     color: white;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
 }
 
 /* Main Content */
-.main-content {
-    margin-top: 100px;
-    text-align: center;
+.content {
+    padding: 20px;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
 }

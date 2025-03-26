@@ -3,7 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
     const profileIcon = document.getElementById("profile-icon");
     const profileMenu = document.getElementById("profile-menu");
-    
+    const authButtons = document.getElementById("auth-buttons");
+    const profileSection = document.getElementById("profile-section");
+
+    // Simulated login check (replace with actual login check logic)
+    let isLoggedIn = false; // Change to true to test logged-in state
+
+    if (isLoggedIn) {
+        authButtons.classList.add("hidden");
+        profileSection.classList.remove("hidden");
+    }
+
     // Toggle sidebar
     menuIcon.addEventListener("click", function (event) {
         event.stopPropagation();
@@ -21,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (profileIcon) {
         profileIcon.addEventListener("click", function (event) {
             event.stopPropagation();
-            profileMenu.classList.toggle("show");
+            profileMenu.style.display = profileMenu.style.display === "block" ? "none" : "block";
         });
 
         // Close profile menu when clicking outside
         document.addEventListener("click", function (event) {
             if (!profileMenu.contains(event.target) && !profileIcon.contains(event.target)) {
-                profileMenu.classList.remove("show");
+                profileMenu.style.display = "none";
             }
         });
     }

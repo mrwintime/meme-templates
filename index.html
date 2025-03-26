@@ -4,46 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Template & Caption Generator</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Navbar -->
     <nav class="navbar">
-        <div id="menu-icon" class="menu-icon">☰</div>
-        <div class="logo">MemeGen</div>
-    </nav>
-
-    <!-- Sidebar Menu -->
-    <div id="sidebar" class="sidebar">
-        <ul>
-            <li><button id="theme-toggle">Themes</button></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Categories</a></li>
-        </ul>
-    </div>
-
-    <!-- Profile Section -->
-    <div class="profile-section">
-        <div id="add-icon" class="add-icon">+</div>
-        <div id="profile-container">
-            <div id="profile-icon" class="profile-icon"></div>
-            <div id="profile-menu" class="profile-menu hidden">
-                <a href="edit-profile.html">Edit Profile</a>
+        <div class="nav-left">
+            <div id="menu-icon" class="menu-icon">&#9776;</div>
+            <div class="logo">MemeSite</div>
+        </div>
+        <div class="nav-right">
+            <div id="auth-buttons">
+                <button class="login-btn">Log In</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+            <div id="profile-section" class="hidden">
+                <img id="profile-icon" class="profile-icon" src="default-profile.png" alt="Profile">
+                <div id="profile-menu" class="profile-menu">
+                    <a href="#">Edit Profile</a>
+                </div>
             </div>
         </div>
-        <div id="auth-buttons">
-            <button onclick="window.location.href='login.html'">Log in</button>
-            <button onclick="window.location.href='signup.html'">Sign up</button>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <a href="#">Themes</a>
+            <a href="#">Settings</a>
+            <a href="#">Categories</a>
         </div>
-    </div>
+    </aside>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <h1>Welcome to MemeGen</h1>
-        <p>Your go-to place for meme templates and captions!</p>
-    </div>
+    <main class="content">
+        <h1>Welcome to MemeSite</h1>
+        <p>Download or upload your favorite meme templates!</p>
+    </main>
 
-    <script src="assets/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
